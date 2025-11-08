@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign up</title>
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav-bar{
+            height: 80px;
+            background-color: aliceblue;
+            margin-bottom: 20px;
+        }
+
+        ul{
+           
+            list-style: none;
+            text-align: right;
+        }
+
+        ul li{
+            display: inline-flex;
+            color: black;
+            margin: 15px;
+            padding: 15px;
+        }
+        .form-container{
+            width: 50%;
+            margin: auto;
+            padding: auto;
+            background-color: whitesmoke;
+            height: 400px;
+        }
+        legend{
+            color: brown;
+            font-size: 20px; 
+            margin-left: 20px;           
+            }
+        label{
+            margin-left: 15px;
+        }
+
+        input{
+            border-radius: 5px;
+            border-width: 1px;
+            margin-left: 5px;
+        }
+        button{
+            border-radius: 5px;
+            border-width: 1px;
+            border-color: aqua;
+            background-color: lightsalmon;
+            text-align: center;
+            color: black;
+            margin-left: 15px;
+            width: 20%;
+            margin-bottom: 20px;
+        }
+
+        fieldset{
+            border-color: pink;
+            border-radius: 5px;
+            padding-top: 20px;
+            border-width: 1px;
+            margin: auto;
+            width: 40%;
+        }
+
+        img{
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            float: left;
+            margin-top: 15px;
+        }
+        p{
+            margin-left: 15px;
+            margin-bottom: 15px;
+            
+        }
+        p a{
+            text-decoration: none;
+        }
+        footer{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="nav-bar">
+        <img src="images/logo.png" alt="no image">
+        <ul>
+            <li><a href="">Home</a></li>
+            <li><a href="">About us</a></li>
+            <li><a href="">Contact us</a></li>
+            <li><a href="">Staff</a></li>
+        </ul>
+    </nav>
+
+    <div class="form-container">
+        <fieldset>
+            <legend>Sign Up</legend>
+            <form action="" method="post">
+                <label for="last-name">First Name</label>
+                <input type="text"><br><br>
+                <label for="first-name">Last Name</label>
+                <input type="text"><br><br>
+                <label for="email">Email</label>
+                <input type="email"><br><br>
+                <label for="password">Password</label>
+                <input type="password"><br><br>
+                <label for="confirm-pass">Confirm Password</label>
+                <input type="password"><br><br>
+                <button type="submit">Sign up</button>
+
+                <p><a href="">Forgot Password?</a></p>
+                <p>Already have an account? <a href="">Sign in</a></p>
+                
+            </form>
+        </fieldset>
+    </div>
+    
+
+    <footer>
+        <p>Copyright &copy; 2025 MyWebsite. All rights reserved.</p>
+    </footer>
+</body>
+</html>
