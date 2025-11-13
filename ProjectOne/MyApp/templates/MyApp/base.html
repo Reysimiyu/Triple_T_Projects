@@ -1,0 +1,31 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>School Management System</title>
+    <link rel="stylesheet" href="{% static 'MyApp/styles/styles.css' %}">
+    <link rel="stylesheet" href="{% static 'MyApp/styles/base_styles.css' %}">
+
+</head>
+<body>
+    <div class="menubar">
+        <ul>
+           <a href="{% url 'home' %}"> <li>Home</li></a>
+           <a href="{% url 'addStd' %}"><li>Register Student</li></a> 
+           <a href="{% url 'fetchstd' %}"><li>Student Details</li></a> 
+            <li>Download</li>
+            <li>Contact us</li>
+            <li>Sign Up</li>
+        </ul>    
+    </div>
+
+    {% block content %}
+
+    {% endblock %}
+
+    
+    
+</body>
+</html>

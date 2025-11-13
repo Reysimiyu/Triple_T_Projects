@@ -4,7 +4,7 @@ from .forms import studentForm
 from . models import addStudent
 
 # Create your views here.
-def Home(request):
+def Home(request):  
     return render(request, 'MyApp/menubar.html')
 
 def Stud(request):
@@ -33,3 +33,8 @@ def registerStd(request):
         return HttpResponse('data saved successfully')
     else:
         return render(request,'MyApp/index.html')
+
+def fetchStd(request):
+    data=addStudent.objects.all()
+    context={'data':data}
+    return render(request,'MyApp/std_detail.html',context)
