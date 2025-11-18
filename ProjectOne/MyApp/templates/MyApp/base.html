@@ -1,6 +1,7 @@
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,23 +10,46 @@
     <link rel="stylesheet" href="{% static 'MyApp/styles/base_styles.css' %}">
 
 </head>
+
 <body>
     <div class="menubar">
         <ul>
-           <a href="{% url 'home' %}"> <li>Home</li></a>
-           <a href="{% url 'addStd' %}"><li>Register Student</li></a> 
-           <a href="{% url 'fetchstd' %}"><li>Student Details</li></a> 
-            <li>Download</li>
-            <li>Contact us</li>
-            <li>Sign Up</li>
-        </ul>    
+            {% if user.is_authenticated %}
+
+            <a href="{% url 'home' %}">
+                <li>Home</li>
+            </a>
+            <a href="{% url 'addStd' %}">
+                <li>Register Student</li>
+            </a>
+            <a href="{% url 'fetchstd' %}">
+                <li>Student Details</li>
+            </a>
+            <a href="{% url 'signout' %}">
+                <li>Logout</li>
+            </a>
+
+            {% else %}
+
+            <a href="{% url 'signup' %}">
+                <li>Signup</li>
+            </a>
+            <a href="{% url 'signin' %}">
+                <li>Login</li>
+            </a>
+
+            {% endif %}
+        </ul>
+
+
     </div>
 
     {% block content %}
 
     {% endblock %}
 
-    
-    
+
+
 </body>
+
 </html>

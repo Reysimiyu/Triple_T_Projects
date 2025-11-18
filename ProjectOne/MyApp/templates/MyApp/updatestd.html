@@ -1,0 +1,38 @@
+
+{% extends 'MyApp/base.html' %}
+{% load static %}
+
+
+    
+</head>
+<body>
+    {% block content %}
+<!-- sign in form -->
+<div class="form-container">
+    <div class="form-div">
+        <h1>Update {{ std.first_name }}</h1>
+    <form action="" method="post">
+    {% csrf_token %}
+        <fieldset>
+            <legend>Update Student</legend>
+                <label for="fname">First Name</label>
+            <input type="text" name="fname" value="{{std.first_name}}"><br>
+            
+             <label for="lname">Last Name</label>
+            <input type="text" name="lname" value="{{std.last_name}}" ><br>
+
+             <label for="email">Email</label>
+            <input type="email" name="email" value="{{std.std_email}}" ><br>
+
+             <label for="regNo">Registration Number</label>
+            <input type="text" name="regNo" value="{{std.std_regNo}}" ><br>
+            <button type="submit">Update</button>
+        </fieldset>
+    </form>
+    </div>
+    
+</div>
+
+{% endblock %}
+</body>
+</html>

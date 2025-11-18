@@ -4,6 +4,7 @@
 
 <body>
     {% block content %}
+    <span>Welcome Back {{ user.username }}</span><br><br>
     <table>
         <thead>Student Details</thead>
         <tr>
@@ -11,6 +12,7 @@
             <th>Last Name</th>
             <th>Email</th>
             <th>Registration Number</th>
+            <th>Actions</th>
         </tr>
 
         {% for detail in data %}
@@ -19,6 +21,8 @@
             <td>{{ detail.last_name }}</td>
             <td>{{ detail.std_email }}</td>
             <td>{{ detail.std_regNo }}</td>
+            <td><a href="{% url 'updatestd' detail.pk %}">Update</a></td>
+            <td><a href="{% url 'deletestd' detail.pk %}">Delete</a></td>
 
         </tr>
 
